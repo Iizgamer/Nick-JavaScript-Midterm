@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: textFont;
-    src: url(./fonts/No_License_Ghang_Plain.ttf);
+    src: url(./fonts/RebellionSquad-ZpprZ.ttf);
 }
 
 @font-face {
@@ -23,10 +23,32 @@
     background-color: #14248A;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#textBox {
+    margin-top: auto;
+    width: 100vw;
+}
+
+p {
+    font-family: textFont;
+}
+
+button {
+    font-family: textFont;
+    background-color: #b7d5d4;
+}
+
 #title {
     font-family: titleFont;
     font-size: 120px;
     color: #FE9000;
+    align-self: center;
 }
 
 #startButton {
@@ -36,16 +58,29 @@
     background-color: #6a6a6a;
     width: 300px;
     border-radius: 20px;
+    align-self: center;
 }
 
 #musicButton {
     font-family: textFont;
-    font-size: 20px;
+    font-size: 30px;
     color: #FFDD4A;
     background-color: #6a6a6a;
     border-radius: 20px;
+    align-self: center;
+    width: 500px;
 }
 
 #continueText {
+    display: none;
+}
+
+#textBoxText {
+    text-align: left;
+    margin-top: -70px;
+    font-size: 40px;
+}
+
+#mcText {
     display: none;
 }
