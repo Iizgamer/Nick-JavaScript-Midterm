@@ -1,4 +1,4 @@
-let music = document.getElementById('titleMusic');
+let music = document.getElementById('music');
 const musicButton = document.getElementById('musicButton');
 const startButton = document.getElementById('startButton');
 const titleText = document.getElementById('title');
@@ -6,7 +6,7 @@ const titleText = document.getElementById('title');
 musicButton.addEventListener('click', function() {
     music.play();
     musicButton.style.display = 'none';
-})
+});
 
 startButton.addEventListener('click', function() {
     musicButton.style.display = 'none';

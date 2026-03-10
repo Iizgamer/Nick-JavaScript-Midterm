@@ -45,3 +45,7 @@
     background-color: #6a6a6a;
     border-radius: 20px;
 }
+
+#continueText {
+    display: none;
+}
