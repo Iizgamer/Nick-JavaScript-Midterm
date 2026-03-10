@@ -1,1 +1,47 @@
+/*
+    Gray: 6a6a6a
+    Light Blue: b7d5d4
+    Yellow: ffdd4a
+    Orange: fe9000
+    Blue: 14248a
+*/
 
+
+@font-face {
+    font-family: textFont;
+    src: url(./fonts/No_License_Ghang_Plain.ttf);
+}
+
+@font-face {
+    font-family: titleFont;
+    src: url(./fonts/Grovestreet-demo.ttf);
+}
+
+
+* {
+    text-align: center;
+    background-color: #14248A;
+}
+
+#title {
+    font-family: titleFont;
+    font-size: 120px;
+    color: #FE9000;
+}
+
+#startButton {
+    font-family: textFont;
+    font-size:80px;
+    color: #FFDD4A;
+    background-color: #6a6a6a;
+    width: 300px;
+    border-radius: 20px;
+}
+
+#musicButton {
+    font-family: textFont;
+    font-size: 20px;
+    color: #FFDD4A;
+    background-color: #6a6a6a;
+    border-radius: 20px;
+}
