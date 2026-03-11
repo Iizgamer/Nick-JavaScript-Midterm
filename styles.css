@@ -73,6 +73,8 @@ button {
 
 #continueText {
     display: none;
+    font-size: 30px;
+    margin-bottom: -50px;
 }
 
 #textBoxText {
@@ -81,6 +83,6 @@ button {
     font-size: 40px;
 }
 
-#mcText {
+#battle-1 {
     display: none;
 }
