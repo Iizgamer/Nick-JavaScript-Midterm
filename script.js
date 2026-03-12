@@ -47,12 +47,22 @@ continueText.addEventListener('click', function() {
         theHelm.style.display = 'block';
         textBoxText.textContent = "What?! A worker! Guess I'll have to rap battle to get out of this!"
     } else if (sceneCount === 5) {
-        battle('./images/the-helm.png');
+        battle('./images/the-helm.png', 50);
     }
 });
 
-function battle(battleImage) {
+function battle(battleImage, enemyHealthMax) {
+    let PHP = 100;
+    const playerHP = document.getElementById('playerHP');
+    const enemyHP = document.getElementById('enemyHP');
+    const enemyHealth = enemyHealthMax;
+    let playerHPText = "Your Flow: " + String(PHP) + '/100'
+    let enemyHPText = "Enemy's Flow: " + String(enemyHealth) + '/' + String(enemyHealthMax);
     document.body.backgroundColor = 'black';
     textBox.style.display = 'none';
     battleBox.style.display = 'block';
+    music.src = './music/euphoria.mp3';
+    playerHP.textContent = playerHPText;
+    enemyHP.textContent = enemyHPText;
+    
 };

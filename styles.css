@@ -18,7 +18,7 @@
 }
 
 
-* {
+body {
     text-align: center;
     background-color: #14248A;
 }
@@ -96,5 +96,24 @@ button {
     background-color: #000000;
     margin-top: auto;
     width: 100vw;
-    height: 200px;
+    height: 280px;
+}
+
+#attack, #heal {
+    font-size: 100px;
+    margin-top: 20px;
+}
+
+#attack {
+    margin-right: 50px;
+}
+
+#playerHP, #enemyHP {
+    background-color: #000000;
+    color:#FFDD4A;
+    font-size: 30px;
+}
+
+#enemyHP {
+    margin-bottom: 20px;
 }
