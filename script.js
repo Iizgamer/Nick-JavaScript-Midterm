@@ -5,6 +5,8 @@ const titleText = document.getElementById('title');
 const textBox = document.getElementById('textBox');
 const textBoxText = document.getElementById('textBoxText');
 const continueText = document.getElementById('continueText');
+const theHelm = document.getElementById('battle-1');
+const battleBox = document.getElementById('battle');
 let sceneCount = 0;
 
 musicButton.addEventListener('click', function() {
@@ -41,5 +43,16 @@ continueText.addEventListener('click', function() {
         document.body.style.backgroundSize = 'cover';
         document.body.style.backgroundPosition = 'center';
         textBoxText.textContent = "Alright! I'm here! Now, let's see... where are those records..."
+    } else if (sceneCount === 4) {
+        theHelm.style.display = 'block';
+        textBoxText.textContent = "What?! A worker! Guess I'll have to rap battle to get out of this!"
+    } else if (sceneCount === 5) {
+        battle('./images/the-helm.png');
     }
 });
+
+function battle(battleImage) {
+    document.body.backgroundColor = 'black';
+    textBox.style.display = 'none';
+    battleBox.style.display = 'block';
+};
