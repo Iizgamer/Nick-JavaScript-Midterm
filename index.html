@@ -8,6 +8,7 @@
     <title>To Be Released</title>
 </head>
 <body>
+    <!-- Intro screen -->
     <h1 id="title">TO BE RELEASED</h1>
     <button id="startButton">Start</button>
     <audio id="music" autoplay loop src="./music/xxx.mp3"></audio>
@@ -15,13 +16,22 @@
     <br>
     <button id="musicButton">Please click here for title music!</button>
 
+    <!-- the big helm -->
     <img src="./images/the-helm.png" id="battle-1">
 
+    <!-- mustarrrrrrrrrrrd -->
+    <img src="./images/mustard-guy.png" id="mustardGuy">
+
+    <button id="takeThem">Take them!</button>
+    <button id="leaveThem">Leave them!</button>
+
+    <!-- Button to continue dialogue -->
     <div id="textBox">
         <p id="textBoxText"></p>
         <button id="continueText">Press to continue!</button>
     </div>
 
+    <!-- Opening battle div -->
     <div id="battle">
         <p id="battleStartDialogue"></p>
         <p id="enemyHP"></p>
@@ -29,5 +39,25 @@
         <button id="heal">Heal</button>
         <p id="playerHP"></p>
     </div>
+
+    <!-- Timing attack div -->
+    <div id="timing-overlay">
+        <div id="timing-wrapper">
+            <div id="timing-combo"></div>
+            <div id="timing-track">
+                <div id="timing-hit-zone">HIT</div>
+            </div>
+            <div class="timing-dots">
+                <div class="timing-dot" id="tdot-0"></div>
+                <div class="timing-dot" id="tdot-1"></div>
+                <div class="timing-dot" id="tdot-2"></div>
+            </div>
+            <div id="timing-result"></div>
+            <button id="timing-btn">Strike</button>
+            <div id="timing-hint">press to begin</div>
+        </div>
+    </div>
+
+    <p id="ending"></p>
 </body>
 </html>

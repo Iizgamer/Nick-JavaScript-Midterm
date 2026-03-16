@@ -91,6 +91,13 @@ button {
     margin-top: -250px;
 }
 
+#mustardGuy {
+    display: none;
+    align-self:center;
+    background-color: rgba(0,0,0, 0.0);
+    margin-top: -250px;
+}
+
 #battle {
     display: none;
     background-color: #000000;
@@ -116,4 +123,159 @@ button {
 
 #enemyHP {
     margin-bottom: 20px;
+}
+
+
+/* ── Timing Attack Overlay ───────────────────────────────────────────────── */
+
+#timing-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+#timing-overlay.active {
+    display: flex;
+}
+
+#timing-wrapper {
+    font-family: monospace;
+    background: #000;
+    border: 1px solid #fff;
+    padding: 24px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#timing-track {
+    position: relative;
+    height: 40px;
+    background: #000;
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+
+#timing-hit-zone {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 26px;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    background: #000;
+    color: #fff;
+    z-index: 2;
+}
+
+#timing-hit-zone.active  { background: #fff; color: #000; }
+#timing-hit-zone.perfect { background: #fff; color: #000; }
+#timing-hit-zone.good    { background: #fff; color: #000; }
+#timing-hit-zone.miss    { background: #000; color: #fff; }
+
+.timing-marker {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 26px;
+    background: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.timing-marker.hit-flash { animation: tflash 0.2s ease-out forwards; }
+@keyframes tflash {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.timing-dots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.timing-dot {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    background: #000;
+}
+.timing-dot.done   { background: #fff; }
+.timing-dot.miss   { background: #000; border-style: dashed; }
+.timing-dot.active { background: #fff; }
+
+#timing-result {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    min-height: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: monospace;
+}
+
+#timing-combo {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    min-height: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: monospace;
+}
+
+#timing-btn {
+    font-family: monospace;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    width: 100%;
+}
+
+#timing-btn:hover  { background: #fff; color: #000; }
+#timing-btn:active { opacity: 0.6; }
+
+#timing-hint {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: #666;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+#takeThem, #leaveThem {
+    display: none;
+    width: 1000px;
+    margin-bottom: 20px;
+    align-self: center;
+    font-size: 100px;
+}
+
+#ending {
+    display: none;
 }
